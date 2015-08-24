@@ -1,3 +1,15 @@
+# Applications Instructions
+-	Run the application : Open index.html
+
+-	Check the tests
+ 1. The feeds array should be defined
+ 2. The feeds objects should have url defined
+ 3. The feeds objects should have name defined
+ 4. The menu should be hidden by default
+ 5. The menu should change visibility when the menu icon is clicked
+ 6. After the loadFeed function is completed, it should have at least a single entry
+ 7. The content should update after a new loadFeed function is called.
+
 # Project Overview
 
 In this project you are given a web-based application that reads RSS feeds. The original developer of this application clearly saw the value in testing, they've already included [Jasmine](http://jasmine.github.io/) and even started writing their first test suite! Unfortunately, they decided to move on to start their own company and we're now left with an application with an incomplete test suite. That's where you come in.
