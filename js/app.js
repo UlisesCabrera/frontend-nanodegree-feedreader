@@ -1,3 +1,4 @@
+/* global google */
 /* app.js
  *
  * This is our RSS feed reader application. It uses the Google
@@ -128,4 +129,4 @@ $(function() {
     menuIcon.on('click', function() {
         $('body').toggleClass('menu-hidden');
     });
-}());
+});

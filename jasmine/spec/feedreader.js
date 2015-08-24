@@ -1,7 +1,7 @@
 /* global allFeeds */
 
 $(function () {
-    
+
     describe('RSS Feeds', function () {
         it('are defined', function () {
             expect(allFeeds).toBeDefined();
@@ -28,17 +28,26 @@ $(function () {
     });
 
     describe('The menu', function () {
-        it('is hidden by default', function () {
-            var body = $('body');
-            expect(body.hasClass('menu-hidden')).toBeTruthy();
-        });
-    });
+        var body = $('body');
 
-    /* TODO: Write a test that ensures the menu changes
-     * visibility when the menu icon is clicked. This test
-     * should have two expectations: does the menu display when
-     * clicked and does it hide when clicked again.
-     */
+        it('is hidden by default', function () {
+            expect(body.hasClass('menu-hidden')).toBe(true);
+        });
+
+        describe('when the menu icon is clicked', function () {
+            beforeEach(function () {
+                $('.menu-icon-link').click();
+            })
+
+            it('it should make the menu visibile', function () {
+                expect(body.hasClass('menu-hidden')).not.toBe(true);
+            });
+
+            it('if the menu is visible it should hide it', function () {
+                expect(body.hasClass('menu-hidden')).toBe(true);
+            });
+        })
+    });
 
     /* TODO: Write a new test suite named "Initial Entries" */
 
